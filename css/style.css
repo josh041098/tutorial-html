@@ -246,3 +246,83 @@ section {
     opacity: .8;
 
 }
+
+.collection_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 5px;
+
+}
+
+.collection_container img {
+    display: flex;
+
+}
+.collection_image {
+    background-color: var(--bg-color);
+    display: grid;
+    place-content: center;
+
+}
+.collection_image h4{
+    padding: 1rem 2 rem 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-family: var(--main-color);
+    color: var(--second-bg-color);
+    
+}
+
+.collection_image p {
+    padding: 0 2rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--bg-color);
+
+}
+.collection_image p del {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.collection_card {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.collection_card h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--text-color);
+
+}
+.collection_card p {
+    font-size: .9rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+
+}
+.collection_banner {
+    position: relative;
+    grid-area: 2/3/3/5;
+    background-image: url(image/imagen\ del\ lado.jfif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.collection_banner_content {
+    position:absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--main-color);
+    font-style: italic;
+
+}
