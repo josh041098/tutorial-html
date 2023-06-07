@@ -21,7 +21,8 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    overflow: auto
+    ;
 
 }
 
@@ -82,7 +83,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url(image/imagen\ de\ fondo.jpg) no-repeat;
+    background: url(image/fondoooo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -237,7 +238,6 @@ section {
     width: 100%;
     height: 100%;
     background: transparent;
-    border: 2px solid red;
     transition: 3s;
 }
 
@@ -252,7 +252,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     gap: 5px;
-    background: url(image/fondo\ para\ sala\ de\ juegos.jpg);
+    
 
 }
 
@@ -312,7 +312,7 @@ section {
 .collection_banner {
     position: relative;
     grid-area: 2/3/3/5;
-    background-image: url(image/imagen\ del\ lado.jfif);
+    background-image: url(image/mando2.2.jfif);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -322,7 +322,7 @@ section {
     top: 50%;
     left: 2rem;
     transform: translateY(-50%);
-    color: var(--text-color);
+    color: var(--main-color);
     font-size: 2.5rem;
     font-weight: 700;
     font-family: var(--main-color);
