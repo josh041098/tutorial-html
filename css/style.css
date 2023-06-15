@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,8 +9,10 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-.contenedor{
+
+.contenedor {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -30,7 +32,7 @@
 html {
     font-size: 62.5%;
     overflow: auto;
-    
+
 
 }
 
@@ -69,9 +71,10 @@ body {
     transition: .3s;
 
 }
+
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color); 
+    color: var(--main-color);
 
 }
 
@@ -82,6 +85,7 @@ body {
     display: none;
 
 }
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -94,45 +98,49 @@ section {
     background: url('image/fondoooo.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    
-    
+
+
 }
+
 .home-content {
     max-width: 60rem;
     z-index: 1;
 }
+
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
-    line-height: 1,3;
-    
+    line-height: 1, 3;
+
 
 }
+
 .home-content .text-animate {
     position: relative;
     width: 32.8 rem;
-    
+
 
 }
 
 .home-content .text-animate h3 {
     font-size: 3.2rem;
     font-weight: 700;
-    color:var(--main-color);
+    color: var(--main-color);
     -webkit-text-stroke: .7px var(--main-color);
-    
+
 
 }
 
 .home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
-    
+
 }
+
 .btn-box {
     position: relative;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
 }
@@ -155,8 +163,9 @@ section {
     overflow: hidden;
     transition: .5s;
 
-    
-}  
+
+}
+
 .btn-box .btn:hover {
     color: var(--main-color);
 }
@@ -219,30 +228,34 @@ section {
     color: var(--main-color);
     z-index: 1;
     overflow: hidden;
-    transition:.5s;
+    transition: .5s;
 
 
 
 }
-.home-sci a:hover{
+
+.home-sci a:hover {
     color: var(--bg-color);
 }
-.home-sci a::before{
+
+.home-sci a::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background:var(--main-color);
+    background: var(--main-color);
     z-index: -1;
-    transition:.5s;
+    transition: .5s;
 }
+
 .home-sci a:hover::before {
     width: 100%;
 
-    
+
 }
+
 .home-imghover {
     position: absolute;
     top: 0;
@@ -264,7 +277,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     gap: 5px;
-    
+
 
 }
 
@@ -274,6 +287,7 @@ section {
     border-style: ridge;
 
 }
+
 .collection_image {
     background-color: var(--bg-color);
     display: grid;
@@ -281,12 +295,13 @@ section {
 
 
 }
-.collection_image h4{
+
+.collection_image h4 {
     padding: 1rem 2 rem 0.5rem 2rem;
     font-size: 1.1rem;
     font-family: var(--main-color);
     color: var(--second-bg-color);
-    
+
 }
 
 .collection_image p {
@@ -296,11 +311,13 @@ section {
     color: var(--bg-color);
 
 }
+
 .collection_image p del {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--main-color);
 }
+
 .collection_card {
     padding: 2rem;
     background-color: transparent;
@@ -311,18 +328,21 @@ section {
     cursor: pointer;
     border-radius: 3rem;
 }
+
 .collection_card h4 {
     font-size: 2rem;
     font-weight: 900;
     font-family: var(--text-color);
 
 }
+
 .collection_card p {
     font-size: .9rem;
     letter-spacing: 2px;
     line-height: 1.5rem;
 
 }
+
 .collection_banner {
     position: relative;
     grid-area: 2/3/3/5;
@@ -331,8 +351,9 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .collection_banner_content {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 2rem;
     transform: translateY(-50%);
@@ -341,5 +362,177 @@ section {
     font-weight: 700;
     font-family: var(--main-color);
     font-style: italic;
+}
 
+.ventana-login {
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+}
+
+
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button {
+    margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+    background: #fff;
+    color: #46A2FD;
+}
+
+/*Formularios*/
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form {
+    width: 100%;
+    padding: 80px 20px;
+    background: transparent;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor__login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.contenedor__login-register form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+
+
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    main {
+        margin-top: 50px;
+    }
+
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form {
+        position: relative;
+    }
 }
