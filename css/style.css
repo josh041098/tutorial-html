@@ -10,6 +10,14 @@
     scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
 }
+.contenedor{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+
+}
 
 :root {
     --bg-color: #081b29;
@@ -21,8 +29,8 @@
 
 html {
     font-size: 62.5%;
-    overflow: auto
-    ;
+    overflow: auto;
+    
 
 }
 
@@ -91,7 +99,6 @@ section {
 }
 .home-content {
     max-width: 60rem;
-    z-index: 1;
 }
 .home-content h1 {
     font-size: 5.6rem;
