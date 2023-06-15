@@ -364,7 +364,7 @@ section {
     font-style: italic;
 }
 
-.ventana-login {
+.ventana__login {
     position: fixed;
     top: 50%;
     left: 55%;

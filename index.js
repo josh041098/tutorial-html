@@ -4,7 +4,7 @@ document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
 // Obtén referencias al botón y a la ventana de inicio de sesión
 const btnLogin = document.getElementById('btn-login');
-const ventanaLogin = document.getElementById('ventana-login');
+const ventanaLogin = document.getElementById('ventana__login');
 
 // Agrega un evento de clic al botón
 btnLogin.addEventListener('click', function() {
