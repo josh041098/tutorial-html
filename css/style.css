@@ -22,10 +22,12 @@
 }
 
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --bg-color: #0b040a;
+    --second-bg-color: #0b040a;
     --text-color: #ededed;
-    --main-color: #00abf0;
+    --main-color: #78278a;
+    --main-color2: rgb(254, 254, 254) ;
+
 
 }
 
@@ -95,11 +97,22 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('image/giflol.gif') no-repeat;
+    background: url('image/fofoo.gif') no-repeat;
     background-size: cover;
     background-position: center;
+    
 
 
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(transparent,var());
 }
 
 .home-content {
@@ -277,7 +290,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     gap: 5px;
-    background: --bg-color;
+    background: url('image/fondoluna4.jpg');
     background-size: cover;
     background-position: center;
 
@@ -299,15 +312,27 @@ section {
 }
 
 .collection-image {
-    background-color: var(--second-bg-color);
+    background-color: transparent;
     display: grid;
     place-content: center;
     border-radius: 2rem;
-    border: .2rem solid var(--main-color);
+    border: transparent;
     
    
 
 
+}
+
+.collection_container .collection_card h4{
+    color:var(--text-color);
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: var(--text-color);
+    
+}
+.collection_container .collection_card p {
+    color:var(--text-color);
+    font-size: 1.3rem;
 }
 
 
@@ -366,7 +391,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 25px;
-    box-shadow: 0px 0px 20px var(--text-color);
+    box-shadow: 0px 0px 20px var(--second-bg-color);
     
 }
 
@@ -375,10 +400,10 @@ section {
     top: 50%;
     left: 2rem;
     transform: translateY(-50%);
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 2.5rem;
     font-weight: 700;
-    font-family: var(--main-color);
+    font-family: var(--text-color);
     font-style: italic;
 }
 
@@ -555,13 +580,17 @@ main {
         position: relative;
     }
 }
+
+.services {
+    background: url(image/fondoluna4.jpg);
+}
 .services h2.animacion {
     animation: animacion-texto 2s ease-in-out infinite;
     margin-bottom: 1rem;
     font-size: 3.2rem;
     font-weight: 700;
-    color: var(--main-color);
-    -webkit-text-stroke: .7px var(--main-color);
+    color: var(white);
+    -webkit-text-stroke: .7px var(white);
     text-align: center;
   }
   
@@ -635,7 +664,7 @@ main {
     width: 350px;
     height: 200px;
     border-radius: 25px;
-    box-shadow: 0px 0px 20px var(--text-color);
+    box-shadow: 0px 0px 20px var(--main-color);
 }
 
 .education h2.animacion {
@@ -656,6 +685,9 @@ main {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    
+
+    
 }
 
 .education .education-row {
@@ -732,7 +764,7 @@ main {
     left: 0;
     width: 0;
     height: 100%;
-    background: #112e42;
+    background: var(--main-color);
     z-index: -1;
     transition: .5s;
     
