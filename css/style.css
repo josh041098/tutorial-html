@@ -667,6 +667,17 @@ main {
     box-shadow: 0px 0px 20px var(--main-color);
 }
 
+.services ::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    background-image: white;
+
+}
+
 .education h2.animacion {
     animation: animacion-texto 2s ease-in-out infinite;
     margin-bottom: 1rem;
