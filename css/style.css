@@ -26,7 +26,7 @@
     --second-bg-color: #0b040a;
     --text-color: #ededed;
     --main-color: #78278a;
-    --main-color2: rgb(254, 254, 254) ;
+    --main-color2: rgb(254, 254, 254);
 
 
 }
@@ -100,7 +100,7 @@ section {
     background: url('image/fofoo.gif') no-repeat;
     background-size: cover;
     background-position: center;
-    
+
 
 
 }
@@ -112,7 +112,7 @@ section {
     bottom: 0;
     width: 100%;
     height: 6rem;
-    background-image: linear-gradient(transparent,var());
+    background-image: linear-gradient(transparent, var());
 }
 
 .home-content {
@@ -155,7 +155,7 @@ section {
     display: flex;
     justify-content: space-between;
     width: 34.5rem;
-    height: 5rem;
+    height: 4rem;
 }
 
 .btn-box .btn {
@@ -295,7 +295,7 @@ section {
     background-position: center;
 
 
-    
+
 
 
 }
@@ -307,7 +307,7 @@ section {
     border-radius: 3rem;
     background: url(image/fondoooo.jpg);
     border-radius: 25px;
-    
+
 
 }
 
@@ -317,21 +317,22 @@ section {
     place-content: center;
     border-radius: 2rem;
     border: transparent;
-    
-   
+
+
 
 
 }
 
-.collection_container .collection_card h4{
-    color:var(--text-color);
+.collection_container .collection_card h4 {
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: 900;
     font-family: var(--text-color);
-    
+
 }
+
 .collection_container .collection_card p {
-    color:var(--text-color);
+    color: var(--text-color);
     font-size: 1.3rem;
 }
 
@@ -392,7 +393,7 @@ section {
     background-repeat: no-repeat;
     border-radius: 25px;
     box-shadow: 0px 0px 20px var(--second-bg-color);
-    
+
 }
 
 .collection_banner_content {
@@ -584,6 +585,7 @@ main {
 .services {
     background: url(image/fondoluna4.jpg);
 }
+
 .services h2.animacion {
     animation: animacion-texto 2s ease-in-out infinite;
     margin-bottom: 1rem;
@@ -592,13 +594,21 @@ main {
     color: var(white);
     -webkit-text-stroke: .7px var(white);
     text-align: center;
-  }
-  
-  @keyframes animacion-texto {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-  }
+}
+
+@keyframes animacion-texto {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 .services-container .services-box h3 {
     margin: 2rem;
@@ -610,14 +620,15 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    
-    
-    }
 
-.services-container{
+
+}
+
+.services-container {
     font-size: 1.4rem;
     margin: 2rem 0 4rem;
 }
+
 .services-container .services-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
@@ -628,11 +639,13 @@ main {
     margin-top: 2rem;
 
 }
-.services-container .services-box:hover{
+
+.services-container .services-box:hover {
     display: inline;
-   
+
 }
-.services-container .services-box h3{
+
+.services-container .services-box h3 {
     margin-bottom: 2rem;
     font-size: 2.2rem;
     font-weight: 700;
@@ -653,14 +666,16 @@ main {
     letter-spacing: .1rem;
     font-weight: 600;
     margin-top: 3rem;
-    
+    border-color: #0b040a;
+
 }
 
-.btm:hover{
+.btm:hover {
     box-shadow: none;
- 
+
 }
-.gif{
+
+.gif {
     width: 350px;
     height: 200px;
     border-radius: 25px;
@@ -689,16 +704,16 @@ main {
 }
 
 
-.education{
+.education {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
-    
 
-    
+
+
 }
 
 .education .education-row {
@@ -742,7 +757,7 @@ main {
 
 }
 
-.education-box .education-content::before{
+.education-box .education-content::before {
     content: "";
     position: absolute;
     top: 0;
@@ -768,7 +783,7 @@ main {
 
 }
 
-.education-content .content::before{
+.education-content .content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -778,11 +793,23 @@ main {
     background: var(--main-color);
     z-index: -1;
     transition: .5s;
-    
+
 }
 
-.education-content .content:hover::before{
+.education-content .content:hover::before {
     width: 100%;
 
 }
 
+.img-boton {
+    display: inline-block;
+    padding: 1rem 1rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    margin-top: 3rem;
+}
