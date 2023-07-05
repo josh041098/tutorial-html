@@ -813,3 +813,6 @@ main {
     font-weight: 600;
     margin-top: 3rem;
 }
+.texto {
+    color: var(--text-color);
+}
