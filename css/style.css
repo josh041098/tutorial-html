@@ -410,26 +410,39 @@ section {
 
 
 .ventana__login {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 55%;
     transform: translate(-50%, -50%);
     z-index: 9999;
     display: none;
+    
 }
+.ventana__login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
 
 
 
 main {
     width: 100%;
-    padding: 20px;
+    padding: 200px;
     margin: auto;
     margin-top: 100px;
 }
 
 .contenedor__todo {
     width: 100%;
-    max-width: 800px;
+    max-width: 2000px;
     margin: auto;
     position: relative;
 }
@@ -447,7 +460,7 @@ main {
 
 .caja__trasera div {
     margin: 100px 40px;
-    color: white;
+    color: var(--main-color);
     transition: all 500ms;
 }
 
@@ -469,19 +482,19 @@ main {
 
 .caja__trasera button {
     padding: 10px 40px;
-    border: 2px solid #fff;
+    border: 2px solid var(--main-color);
     font-size: 14px;
     background: transparent;
     font-weight: 600;
     cursor: pointer;
-    color: white;
+    color: var(--main-color);
     outline: none;
     transition: all 300ms;
 }
 
 .caja__trasera button:hover {
-    background: #fff;
-    color: #46A2FD;
+    background:var(--bg-color);
+    color: var(--main-color);
 }
 
 /*Formularios*/
@@ -511,7 +524,7 @@ main {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #46A2FD;
+    color: var(--main-color);
 }
 
 .contenedor__login-register form input {
@@ -519,7 +532,7 @@ main {
     margin-top: 20px;
     padding: 10px;
     border: none;
-    background: #F2F2F2;
+    background: violet;
     font-size: 16px;
     outline: none;
 }
@@ -529,10 +542,10 @@ main {
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #46A2FD;
+    background: var(--main-color);
     font-weight: 600;
     cursor: pointer;
-    color: white;
+    color:var(--bg-color);
     outline: none;
 }
 
@@ -540,7 +553,7 @@ main {
 
 
 .formulario__login {
-    opacity: 1;
+    opacity: 100;
     display: block;
 }
 
@@ -816,3 +829,84 @@ main {
 .texto {
     color: var(--text-color);
 }
+.textojuegos {
+    display: flex;
+    text-align: center;
+    padding: 1rem 1rem;
+   
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+    .home {
+        padding: 0 4%;
+    }
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4% ;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgb(28, 26, 26);
+    }
+
+    .navar a {
+        display: block;
+
+    }
+     
+}
+
+.botonvolver svg {
+    width: 60px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 4rem;
+   
+}
+#fondo-difuminado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  display: none;
+}
+
+#cerrar-ventana {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
