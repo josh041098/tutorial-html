@@ -77,18 +77,80 @@ function register() {
     }
 }
 
-document.getElementById("btn-login").addEventListener("click", function() {
+document.getElementById("btn-login").addEventListener("click", function () {
     document.getElementById("fondo-difuminado").style.display = "block";
     // Aquí agregas el código para mostrar tu ventana de login encima del fondo difuminado
-  });
+});
 
-  document.getElementById("btn-login").addEventListener("click", function() {
+document.getElementById("btn-login").addEventListener("click", function () {
     document.getElementById("fondo-difuminado").style.display = "block";
     document.getElementById("ventana__login").style.display = "block";
-  });
-  
-  document.getElementById("cerrar-ventana").addEventListener("click", function() {
+});
+
+document.getElementById("cerrar-ventana").addEventListener("click", function () {
     document.getElementById("fondo-difuminado").style.display = "none";
     document.getElementById("ventana__login").style.display = "none";
-  });
-  
+});
+
+
+
+// Obtiene los elementos del formulario de inicio de sesión y registro
+const loginForm = document.querySelector('.formulario__login');
+const registerForm = document.querySelector('.formulario__register');
+
+// Inicia sesión con Firebase
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = loginForm.querySelector('input[type="text"]').value;
+  const password = loginForm.querySelector('input[type="password"]').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Muestra un mensaje de confirmación
+      alert('¡Inicio de sesión exitoso!');
+
+      // Redirige al usuario a la página de inicio
+      window.location.href = 'index.html';
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+});
+
+// Registra al usuario con Firebase
+registerForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = registerForm.querySelector('input[type="text"]:first-of-type').value;
+  const email = registerForm.querySelector('input[type="text"]:nth-of-type(2)').value;
+  const password = registerForm.querySelector('input[type="password"]').value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Actualiza el nombre del usuario
+      userCredential.user.updateProfile({
+        displayName: name
+      }).then(() => {
+        // Muestra un mensaje de confirmación
+        alert('¡Registro exitoso!');
+
+        // Redirige al usuario a la página de inicio
+        window.location.href = 'index.html';
+      });
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+});
+
+// Muestra un mensaje de bienvenida si el usuario ya ha iniciado sesión
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    const displayName = user.displayName;
+    alert(`¡Bienvenido, ${displayName}!`);
+  }
+});
+
+
+
